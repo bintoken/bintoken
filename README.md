@@ -1,6 +1,6 @@
 # Bintoken
 
-Bintoken is a binary encoding format that supports the following types.
+[Bintoken](specification.md) is a binary encoding format that supports the following types.
 
 Type | Description
 ---: | ---
@@ -11,3 +11,7 @@ String | UTF-8 encoded character sequence.
 Binary data | A sequence of raw octets (better known as a byte-array.)
 Nullable | Used to indicate the absence of data.
 Groups | Used to encoded composite data types.
+
+## Links
+* [Specification](specification.md)
+* [Design decisions](rationale.md)
