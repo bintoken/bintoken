@@ -14,4 +14,5 @@ Groups | Used to encoded composite data types.
 
 ## Links
 * [Specification](specification.md)
+* [Cheat sheet](cheatsheet.md)
 * [Design decisions](rationale.md)
