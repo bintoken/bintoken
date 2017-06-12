@@ -49,7 +49,7 @@ Hex |	Binary | Type | Size | Description
 `%xDC` | 1101 1100 | `int32v64` | 1 + 8 + N | 32-bits integer array with 64-bits length.<br/>N = Number of octets in array.
 `%xDD` | 1101 1101 | `float32v64` | 1 + 8 + N | 32-bits float array with 64-bits length.<br/>N = Number of octets in array.
 `%xDE` | 1101 1110 | `int64v64` | 1 + 8 + N | 64-bits integer array with 64-bits length.<br/>N = Number of octets in array.
-`%xCF` | 1101 1111 | `float64v64` | 1 + 8 + N | 64-bits float array with 64-bits length.<br/>N = Number of octets in array.
+`%xDF` | 1101 1111 | `float64v64` | 1 + 8 + N | 64-bits float array with 64-bits length.<br/>N = Number of octets in array.
 `%xE0` | 1110 0000 | `int8` | 1 | Value -32.
 `...` | | | |
 `%xFF` | 1111 1111 | `int8` | 1 | Value -1.
