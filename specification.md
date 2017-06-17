@@ -134,7 +134,7 @@ float32 = %xC5 %xZZ.ZZ.ZZ.ZZ
 float64 = %xD7 %xZZ.ZZ.ZZ.ZZ.ZZ.ZZ.ZZ.ZZ
 ```
 
-### Compact
+### Compact array
 
 Compact arrays are variable-length types that contain a homogeneous sequence of elements. The element type is encoded in the array type, and therefore not repeated in each element. The element type is restricted to one of the primitive types.
 
@@ -143,43 +143,43 @@ The length is the number of bytes (not the number of elements) in the array. The
 Binary data (a.k.a. byte-buffer or octet-buffer) can be encoded as a compact array of 8-bits integers (`int8v`.)
 
 ```abnf
-compact    = int8v / int16v / int32v / int64v / float32v / float64v
+compact    = array_int8 / array_int16 / array_int32 / array_int64 / array_float32 / array_float64
 
-int8v      = int8v8 / int8v16 / int8v32 / int8v64
-int8v8     = %A8 length8 data
-int8v16    = %B8 length16 data
-int8v32    = %C8 length32 data
-int8v64    = %D8 length64 data
+array_int8      = array8_int8 / array16_int8 / array32_int8 / array64_int8
+array8_int8     = %A8 length8 data
+array16_int8    = %B8 length16 data
+array32_int8    = %C8 length32 data
+array64_int8    = %D8 length64 data
 
-int16v     = int16v8 int16v16 int16v32 int16v64
-int16v8    = %AA length8 data
-int16v16   = %BA length16 data
-int16v32   = %CA length32 data
-int16v64   = %DA length64 data
+array_int16     = array8_int16 array16_int16 array32_int16 array64_int16
+array8_int16    = %AA length8 data
+array16_int16   = %BA length16 data
+array32_int16   = %CA length32 data
+array64_int16   = %DA length64 data
 
-int32v     = int32v8 / int32v16 / int32v32 / int32v64
-int32v8    = %AC length8 data
-int32v16   = %BC length16 data
-int32v32   = %CC length32 data
-int32v64   = %DC length64 data
+array_int32     = array8_int32 / array16_int32 / array32_int32 / array64_int32
+array8_int32    = %AC length8 data
+array16_int32   = %BC length16 data
+array32_int32   = %CC length32 data
+array64_int32   = %DC length64 data
 
-int64v     = int64v8 / int64v16 / int64v32 / int64v64
-int64v8    = %AE length8 data
-int64v16   = %BE length16 data
-int64v32   = %CE length32 data
-int64v64   = %DE length64 data
+array_int64     = array8_int64 / array16_int64 / array32_int64 / array64_int64
+array8_int64    = %AE length8 data
+array16_int64   = %BE length16 data
+array32_int64   = %CE length32 data
+array64_int64   = %DE length64 data
 
-float32v   = float32v8 / float32v16 / float32v32 / float32v64
-float32v8  = %AD length8 data
-float32v16 = %BD length16 data
-float32v32 = %CD length32 data
-float32v64 = %DD length64 data
+array_float32   = array8_float32 / array16_float32 / array32_float32 / array64_float32
+array8_float32  = %AD length8 data
+array16_float32 = %BD length16 data
+array32_float32 = %CD length32 data
+array64_float32 = %DD length64 data
 
-float64v   = float64v8 / float64v16 / float64v32 / float64v64
-float64v8  = %AF length8 data
-float64v16 = %BF length16 data
-float64v32 = %CF length32 data
-float64v64 = %DF length64 data
+array_float64   = array8_float64 / array16_float64 / array32_float64 / array64_float64
+array8_float64  = %AF length8 data
+array16_float64 = %BF length16 data
+array32_float64 = %CF length32 data
+array64_float64 = %DF length64 data
 ```
 
 ### String
