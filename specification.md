@@ -146,40 +146,40 @@ Binary data (a.k.a. byte-buffer or octet-buffer) can be encoded as a compact arr
 compact    = array_int8 / array_int16 / array_int32 / array_int64 / array_float32 / array_float64
 
 array_int8      = array8_int8 / array16_int8 / array32_int8 / array64_int8
-array8_int8     = %A8 length8 data
-array16_int8    = %B8 length16 data
-array32_int8    = %C8 length32 data
-array64_int8    = %D8 length64 data
+array8_int8     = %xA8 length8 data
+array16_int8    = %xB8 length16 data
+array32_int8    = %xC8 length32 data
+array64_int8    = %xD8 length64 data
 
 array_int16     = array8_int16 array16_int16 array32_int16 array64_int16
-array8_int16    = %AA length8 data
-array16_int16   = %BA length16 data
-array32_int16   = %CA length32 data
-array64_int16   = %DA length64 data
+array8_int16    = %xAA length8 data
+array16_int16   = %xBA length16 data
+array32_int16   = %xCA length32 data
+array64_int16   = %xDA length64 data
 
 array_int32     = array8_int32 / array16_int32 / array32_int32 / array64_int32
-array8_int32    = %AC length8 data
-array16_int32   = %BC length16 data
-array32_int32   = %CC length32 data
-array64_int32   = %DC length64 data
+array8_int32    = %xAC length8 data
+array16_int32   = %xBC length16 data
+array32_int32   = %xCC length32 data
+array64_int32   = %xDC length64 data
 
 array_int64     = array8_int64 / array16_int64 / array32_int64 / array64_int64
-array8_int64    = %AE length8 data
-array16_int64   = %BE length16 data
-array32_int64   = %CE length32 data
-array64_int64   = %DE length64 data
+array8_int64    = %xAE length8 data
+array16_int64   = %xBE length16 data
+array32_int64   = %xCE length32 data
+array64_int64   = %xDE length64 data
 
 array_float32   = array8_float32 / array16_float32 / array32_float32 / array64_float32
-array8_float32  = %AD length8 data
-array16_float32 = %BD length16 data
-array32_float32 = %CD length32 data
-array64_float32 = %DD length64 data
+array8_float32  = %xAD length8 data
+array16_float32 = %xBD length16 data
+array32_float32 = %xCD length32 data
+array64_float32 = %xDD length64 data
 
 array_float64   = array8_float64 / array16_float64 / array32_float64 / array64_float64
-array8_float64  = %AF length8 data
-array16_float64 = %BF length16 data
-array32_float64 = %CF length32 data
-array64_float64 = %DF length64 data
+array8_float64  = %xAF length8 data
+array16_float64 = %xBF length16 data
+array32_float64 = %xCF length32 data
+array64_float64 = %xDF length64 data
 ```
 
 ### String
