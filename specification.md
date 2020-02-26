@@ -140,7 +140,7 @@ Compact arrays are variable-length types that contain a homogeneous sequence of 
 
 The length is the number of bytes (not the number of elements) in the array. The length must be an exact multiple of the size of the element type.
 
-Binary data (a.k.a. byte-buffer or octet-buffer) can be encoded as a compact array of 8-bits integers (`int8v`.)
+Binary data (a.k.a. byte-buffer or octet-buffer) can be encoded as a compact array of 8-bits integers (`array_int8`.)
 
 ```abnf
 compact    = array_int8 / array_int16 / array_int32 / array_int64 / array_float32 / array_float64
