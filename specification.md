@@ -1,4 +1,4 @@
-# Bintoken Specification Version 0.11
+# Bintoken Specification Version 0.12
 
 This specification uses the [Augmented Backus-Naur Form](http://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_Form) with the following extension: `%xZZ` is a short-hand notation for `%x00-FF`, which represents any value between `%x00` and `%xFF`.
 
@@ -235,10 +235,19 @@ For streaming arrays, the array encoding is used, but with count set to null.
 An [associative array](http://en.wikipedia.org/wiki/Associative_array) is a collection of key-value pairs. A pair is a record with two elements.
 
 ```abnf
-map    = open6 count *pair close6
-pair   = open0 key value close0
+map    = open7 count *pair close7
+pair   = key value
 key    = element
 value  = element
+open7  = %x9E
+close7 = %x9F
+```
+
+Earlier versions of the Bintoken specification wrapped the key-value pairs in a record. This wrapping is superfluous and has been deprecated since Bintoken 0.12.
+
+```abnf
+deprecated_map    = open6 count *deprecated_pair close6
+deprecated_pair   = open0 key value close0
 open6  = %x9C
 close6 = %x9D
 ```
