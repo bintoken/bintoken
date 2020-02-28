@@ -11,11 +11,13 @@ Hex |	Binary | Type | Size | Description
 `%x81` | 1000 0001 | `bool` | 1 | True.
 `%x82` | 1000 0010 | `null` | 1 | Null.
 `%x90` | 1001 0000 | `open0` | 1 | Open record.
-`%x91` | 1001 1000 | `close0` | 1 | Close record.
-`%x92` | 1001 0001 | `open1` | 1 | Open array.
-`%x93` | 1001 1111 | `close1` | 1 | Close array.
-`%x9C` | 1001 0010 | `open6` | 1 | Open associative array.
-`%x9D` | 1001 1111 | `close6` | 1 | Close associative array.
+`%x91` | 1001 0001 | `close0` | 1 | Close record.
+`%x92` | 1001 0010 | `open1` | 1 | Open array.
+`%x93` | 1001 0011 | `close1` | 1 | Close array.
+`%x9C` | 1001 1100 | `open6` | 1 | Open associative array (deprecated)
+`%x9D` | 1001 1101 | `close6` | 1 | Close associative array (deprecated)
+`%x9E` | 1001 1110 | `open7` | 1 | Open associative array.
+`%x9F` | 1001 1111 | `close7` | 1 | Close associative array.
 `%xA0` | 1010 0000 | `int8` | 1 + 1 | 8-bits integer.
 `%xA8` | 1010 1000 | `array8_int8` | 1 + 1 + N | 8-bits integer array with 8-bits length.<br/>N = Number of octets in array.
 `%xA9` | 1010 1001 | `string8` | 1 + 1 + N | String with 8-bits length.<br/>N = number of octets in string.
